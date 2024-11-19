@@ -1,0 +1,72 @@
+.container {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.squares {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.square:hover {
+  transform: scale(1.1);
+  background-color: #ddd;
+}
+
+.square-clicked {
+  background-color: #ffeb3b;
+  transform: scale(0.95);
+}
+
+.square-winner {
+  background-color: #4caf50;
+  color: white;
+  animation: winner-flash 1s infinite;
+}
+
+@keyframes winner-flash {
+  0%, 100% {
+    background-color: #4caf50;
+  }
+  50% {
+    background-color: #81c784;
+  }
+}
+
+.square-inactive {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+button {
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3700b3;
+}
